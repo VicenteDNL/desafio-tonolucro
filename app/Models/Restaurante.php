@@ -19,4 +19,12 @@ class Restaurante extends Model
         'estado',
     ];
 
+    public function cardapios()
+    {
+        return $this->hasMany(Cardapio::class);
+
+    }
+
+
+
 }

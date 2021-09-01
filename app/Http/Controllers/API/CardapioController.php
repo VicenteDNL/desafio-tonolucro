@@ -14,7 +14,7 @@ class CardapioController extends Controller
 
     public function index()
     {
-        return $this->success(Cardapio::all());
+        return $this->success(Cardapio::with('restaurante')->get());
     }
 
     public function store(CardapioRequest $request)
@@ -25,7 +25,7 @@ class CardapioController extends Controller
 
     public function show($id)
     {
-        $cardapio= Cardapio::find($id);
+        $cardapio= Cardapio::with('restaurante')->find($id);
         if (!$cardapio){
             return $this->error('Cardápio não encontrado',400);
         }
