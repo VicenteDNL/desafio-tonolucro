@@ -20,8 +20,13 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/me', [AuthController::class, 'me']);
 
     #Restautante
-    Route::apiResource('restaurante', RestauranteController::class);
+    Route::apiResource('restaurante', RestauranteController::class)->only([
+        'store', 'update','destroy'
+    ]);
 
 });
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login',    [AuthController::class, 'login']);
+Route::apiResource('restaurante', RestauranteController::class)->only([
+    'index', 'show'
+]);

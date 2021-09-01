@@ -30,8 +30,7 @@ class RestauranteController extends Controller
         if (!$restaurante){
             return $this->error('Restaurante não encontrado',400);
         }
-        $restaurante->delete();
-        return $this->success($restaurante,);
+        return $this->success($restaurante);
     }
 
     public function update(RestauranteRequest $request, $id)
