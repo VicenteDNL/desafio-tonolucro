@@ -18,7 +18,7 @@ use App\Http\Controllers\API\CardapioController;
 */
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::post('/me', [AuthController::class, 'me']);
+    Route::get('/me', [AuthController::class, 'me']);
 
     #Restautante
     Route::apiResource('restaurante', RestauranteController::class)->only([
@@ -27,6 +27,11 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     #Cardápio
     Route::apiResource('cardapio', CardapioController::class)->only([
+        'store', 'update','destroy'
+    ]);
+
+    #Produto
+    Route::apiResource('produto', CardapioController::class)->only([
         'store', 'update','destroy'
     ]);
 
@@ -43,5 +48,10 @@ Route::apiResource('restaurante', RestauranteController::class)->only([
 
 #Cardápio
 Route::apiResource('cardapio', CardapioController::class)->only([
+    'index', 'show'
+]);
+
+#Produto
+Route::apiResource('produto', CardapioController::class)->only([
     'index', 'show'
 ]);

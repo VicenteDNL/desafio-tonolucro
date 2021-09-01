@@ -19,4 +19,10 @@ class Cardapio extends Model
     {
         return $this->belongsTo(Restaurante::class);
     }
+
+    public function produtos()
+    {
+        return $this->hasMany(Produto::class);
+
+    }
 }
