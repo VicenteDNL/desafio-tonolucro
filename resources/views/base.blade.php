@@ -11,7 +11,7 @@
 </head>
 <body class="bg-dark">
 <div class="text-center m-5">
-    <h2 class="text-white">Desafio Tonolucro</h2>
+    <h2 class="text-white"><i class="fas fa-utensils"></i> Desafio Tonolucro <i class="fas fa-utensils"></i></h2>
     <h5 class="text-white">by: Danilo Saraiva Vicente</h5>
     <div>
         <a href="https://github.com/VicenteDNL/desafio-tonolucro" target="_blank" class="btn btn-sm btn-light">Repositório</a>

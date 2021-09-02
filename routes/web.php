@@ -15,5 +15,5 @@ use App\Http\Controllers\WEB\CardapioController;
 |
 */
 
-Route::get('/', [RestauranteController::class,'index']);
+Route::get('/', [RestauranteController::class,'index'])->name('restaurantes.index');
 Route::get('restaurante/{restaurante}/cardapios', [CardapioController::class,'index'])->name('cardapios.index');
