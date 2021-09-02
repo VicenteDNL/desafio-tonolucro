@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WEB\IndexController;
+use App\Http\Controllers\WEB\RestauranteController;
+use App\Http\Controllers\WEB\CardapioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,5 @@ use App\Http\Controllers\WEB\IndexController;
 |
 */
 
-Route::get('/', [IndexController::class,'index']);
+Route::get('/', [RestauranteController::class,'index']);
+Route::get('restaurante/{restaurante}/cardapios', [CardapioController::class,'index'])->name('cardapios.index');

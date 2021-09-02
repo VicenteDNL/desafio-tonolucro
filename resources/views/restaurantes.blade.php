@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="card-footer text-muted">
-                    <a href="/" class="btn btn-sm btn-dark">Ver Cardápios</a>
+                    <a href="{{route('cardapios.index', ['restaurante'=>$restaurante->id])}}" class="btn btn-sm btn-dark">Ver Cardápios</a>
                 </div>
             </div>
         @endforeach

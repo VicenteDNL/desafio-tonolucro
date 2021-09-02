@@ -6,11 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\Restaurante;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class RestauranteController extends Controller
 {
     public function index()
     {
-        $restaurante = Restaurante::all();
-        return view('index',['restaurantes'=>$restaurante]);
+        $restaurantes = Restaurante::all();
+        return view('restaurantes',compact('restaurantes'));
     }
 }
