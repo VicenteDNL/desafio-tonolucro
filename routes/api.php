@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\RestauranteController;
 use App\Http\Controllers\API\CardapioController;
+use App\Http\Controllers\API\ProdutoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     ]);
 
     #Produto
-    Route::apiResource('produto', CardapioController::class)->only([
+    Route::apiResource('produto', ProdutoController::class)->only([
         'store', 'update','destroy'
     ]);
 
@@ -52,6 +53,6 @@ Route::apiResource('cardapio', CardapioController::class)->only([
 ]);
 
 #Produto
-Route::apiResource('produto', CardapioController::class)->only([
+Route::apiResource('produto', ProdutoController::class)->only([
     'index', 'show'
 ]);

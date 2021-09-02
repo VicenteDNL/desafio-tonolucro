@@ -28,7 +28,7 @@ class ProdutoRequest extends FormRequest
             'nome'        => $obrigatorio.'string|max:255',
             'descricao'   => $obrigatorio.'string',
             'cardapio_id' => $obrigatorio.'exists:App\Models\Cardapio,id',
-            'preco'     => 'numeric|max:8',
+            'preco'     => 'numeric',
         ];
     }
 
@@ -41,9 +41,8 @@ class ProdutoRequest extends FormRequest
             'descricao.required'   =>'O campo descricao é obrigatório',
             'descricao.string'     =>'O campo descricao deve ser texto',
             'cardapio_id.exists'   =>'Cardápio não encontrado',
-            'cardapio_id.required' =>'O campo restaurante é obrigatório',
-            'preco.numeric'        =>'O campo preco deve ser numerico',
-            'preco.max'            =>'O campo preco excedeu o tamanho máximo',
+            'cardapio_id.required' =>'O campo cardapio é obrigatório',
+            'preco.numeric'        =>'O campo preco deve ser numerico'
 
         ];
     }
