@@ -13,7 +13,7 @@
     <h2 class="text-white">Desafio Tonolucro</h2>
     <h5 class="text-white">by: Danilo Saraiva Vicente</h5>
     <div>
-        <button type="button" class="btn btn-sm btn-light">Repositório</button>
+        <a href="https://github.com/VicenteDNL/desafio-tonolucro" target="_blank" class="btn btn-sm btn-light">Repositório</a>
         <button type="button" class="btn btn-sm btn-light">Colections API (postman)</button>
     </div>
 </div>
