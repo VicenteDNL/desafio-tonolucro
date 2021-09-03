@@ -30,7 +30,8 @@ class RestauranteController extends Controller
         if (!$restaurante){
             return $this->error('Restaurante não encontrado',400);
         }
-        return $this->success($restaurante);
+        $cardapios = $restaurante->cardapios()->with('produtos')->get();
+        return $this->success(['restaurante'=>$restaurante,'cardapios'=>$cardapios]);
     }
 
     public function update(RestauranteRequest $request, $id)

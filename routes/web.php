@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WEB\RestauranteController;
-use App\Http\Controllers\WEB\CardapioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +12,3 @@ use App\Http\Controllers\WEB\CardapioController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', [RestauranteController::class,'index'])->name('restaurantes.index');
-Route::get('restaurante/{restaurante}/cardapios', [CardapioController::class,'index'])->name('cardapios.index');
